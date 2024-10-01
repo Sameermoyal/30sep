@@ -51,9 +51,9 @@ class Tree{
         if(temp == nullptr)
             return ;
          cout<<temp->data<<" ";   
-        inorder(temp->left);
+        preorder(temp->left);
         
-        inorder(temp->right);
+        preorder(temp->right);
     }
     
     void postorder(Node *root){
@@ -61,9 +61,9 @@ class Tree{
         if(temp == nullptr)
             return ;
             
-        inorder(temp->left);
+        postorder(temp->left);
        
-        inorder(temp->right);
+        postorder(temp->right);
          cout<<temp->data<<" ";
     }
     
@@ -92,15 +92,14 @@ class Tree{
 
 int main(){
     Tree mytree;
-    mytree.insertVal(56);
-    mytree.insertVal(6);
+    mytree.insertVal(18);
+    mytree.insertVal(19);
+    // mytree.insertVal(10);
+    mytree.insertVal(2);
     mytree.insertVal(5);
-    mytree.insertVal(57);
-    mytree.insertVal(58);
-    mytree.insertVal(587);
-    mytree.insertVal(523);
-    mytree.insertVal(516);
-    mytree.insertVal(576);
-    
+    mytree.insertVal(8);
+    mytree.insertVal(21);
+    mytree.insertVal(39);
+  
     mytree.displayNode();
 }
